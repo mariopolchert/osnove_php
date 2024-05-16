@@ -6,14 +6,29 @@
     <title>PHP & HTML</title>
 </head>
 <body>
+    <!-- ovo je html komentar -->
     <h1>PHP & HTML</h1>
     
     <?php
-        $ispis = "Ovo je ispisano pomocu PHP jezika."
+        error_reporting(E_ALL);
+        ini_set('display_errors', 1);
+
+        // include "include_require.php2342";
+        // require_once "include_require.php";
+        // $ispis = "Ovo je ispisano pomocu PHP jezika."
     ?>
 
     <section>
-        <p><?php echo $ispis; ?></p>
+        <p><?php echo $ispis ?></p>
+    </section>
+
+    <section>
+        <p>
+            <?= $ispis2 ?>
+        </p>
+        <p>
+            <?= 'Skraceni PHP tag za ispis' ?>
+        </p>
     </section>
 </body>
 </html>
