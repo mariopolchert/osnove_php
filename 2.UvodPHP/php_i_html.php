@@ -13,9 +13,9 @@
         error_reporting(E_ALL);
         ini_set('display_errors', 1);
 
-        // include "include_require.php2342";
-        // require_once "include_require.php";
-        // $ispis = "Ovo je ispisano pomocu PHP jezika."
+        include "include_require.php2342";
+        require_once "include_require.php";
+        $ispis = "Ovo je ispisano pomocu PHP jezika."
     ?>
 
     <section>
