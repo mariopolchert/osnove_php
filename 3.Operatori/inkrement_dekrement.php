@@ -13,6 +13,7 @@ echo $b--;//21
 echo '<br>';
 
 echo --$b;//19
+echo '<br>';
 
 
 // prednost pri izvodjenju izraza
@@ -25,3 +26,13 @@ echo --$b;//19
 // !== !=
 // &&
 // ||
+
+echo '--------------------------';
+echo '<br>';
+
+// primjer redosljeda izvrsavanja
+echo 2 + 3 * 4;
+echo '<br>';
+echo 2 + 3 - 4;
+echo '<br>';
+echo (2 + 3) * 4;
