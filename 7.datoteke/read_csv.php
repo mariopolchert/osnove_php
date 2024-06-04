@@ -2,15 +2,17 @@
 
 const USERS_CSV = __DIR__ . '/podaci/users.csv';
 
-if (($handle = fopen(USERS_CSV, 'r')) !== false) {
-
+if (false !== ($handle = fopen(USERS_CSV, 'r'))) {
+    $headers = fgetcsv($handle);
     $data = [];
-    while (($row = fgetcsv($handle)) !== false) {
-        $data[] = $row;
-        echo $row[0] . ' ' . $row[1] . ' ' . $row[2] . ' ' . $row[3] . ' ' . $row[4] . '<br>';
-    }
 
+    while (false !== ($row = fgetcsv($handle))) {
+        $data[] = array_combine($headers, $row);
+
+        /*  echo $row[0] . ' ' . $row[1] . ' ' . $row[2] . ' ' . $row[3] . ' ' . $row[4] . '<br>'; */
+    }
     fclose($handle);
+    var_dump($data);
 
 
     /* $users = file(USERS_CSV);
