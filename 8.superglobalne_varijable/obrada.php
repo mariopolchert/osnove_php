@@ -17,4 +17,4 @@ if (empty($podaci) || $podaci['first_name'] === "" && $podaci['last_name'] === "
         echo 'Prezime: ' . "Nema podatka" . '<br>';
     }
 }
-    
+
